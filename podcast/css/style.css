@@ -1,0 +1,463 @@
+:root{
+  --accent:#ff5f5f;
+  --bg:#fafafa;
+  --text:#222;
+}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+.back {
+    position: fixed;
+    background:var(--bg);
+    color:var(--text);
+    padding: 5px;
+    border: 0.3px solid var(--accent);
+    border-radius: 5px;
+    right: 20px;
+}
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem 1rem;
+  background:#fff;
+  box-shadow:0 2px 4px rgba(0,0,0,.05);
+  height: 70px;
+}
+.logo{
+  font-size:1.4rem;
+  font-weight:700;
+  color:var(--accent);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  gap: 100px;
+  position: absolute;
+  z-index: 2;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.nav-link {
+  transition:all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fa425a;
+  border-radius: 5px;
+  background-color: #ffe0b27c;
+  padding: 5px;
+
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--accent);
+}
+
+@media (max-width:768px) {
+  .hamburger {
+    display: block;
+    z-index: 2;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--bg);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
+
+.auth-buttons button{
+  margin-left:.5rem;
+  padding:.5rem 1rem;
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+.books {
+  padding: 5px;
+  border:1px solid #ddd;
+  border-radius:4px;
+  font-size: 18px;
+  background-color: var(--bg);
+}
+
+.books a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    header {
+    flex-direction: column;
+    justify-content: space-around;
+    padding:1rem 0.5rem;
+  }
+
+  .auth-buttons button {
+        background: none;
+        color:var(--accent);
+    }
+}
+
+.filter-btn {
+  border: 0.5px solid rgb(208, 208, 208);
+  background: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-btn:active {
+  border: 0.5px solid rgb(218, 251, 224);
+}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:1.5rem;
+  padding:2rem;
+}
+.card{
+  background:#fff;
+  border-radius:8px;
+  padding:1.2rem;
+  box-shadow:0 2px 6px rgba(0,0,0,.06);
+  cursor:pointer;
+  position:relative;
+}
+.card h3{
+  font-size:1.1rem;
+  margin-bottom:.5rem;
+}
+.card p{
+  font-size:.9rem;
+  color:#555;
+}
+.star{
+  position:absolute;
+  top:.8rem;
+  right:.8rem;
+  font-size:1.4rem;
+  color:#ccc;
+  cursor:pointer;
+  user-select:none;
+}
+.star.on{
+  color:var(--accent);
+}
+/* detail */
+.back{
+  display:inline-block;
+  margin:1.2rem 2rem;
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+.player-section{
+  max-width:700px;
+  margin:0 auto 3rem;
+  padding:0 1rem;
+}
+.player-section h1{
+  margin-bottom:.5rem;
+}
+audio{
+  width:100%;
+  margin:1rem 0;
+}
+.controls{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+.controls button{
+  padding:.6rem 1rem;
+  border:1px solid #ddd;
+  background:#fff;
+  border-radius:4px;
+  cursor:pointer;
+}
+.controls .star{
+  font-size:1.8rem;
+}
+details{
+  background:#fff;
+  padding:1rem;
+  border-radius:6px;
+  width: auto;
+  max-height: 400px;
+  overflow-y: auto;
+  color: var(--text);
+  padding: 20px;
+}
+pre{
+  white-space:pre-wrap;
+  font-family:"Noto Sans KR",sans-serif;
+  font-size:.95rem;
+}
+/* modal */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.modal-content{
+  background:#fff;
+  padding:2rem;
+  border-radius:8px;
+  width:90%;
+  max-width:380px;
+  position:relative;
+}
+.modal-content h2{
+  margin-bottom:1rem;
+}
+.modal-content input{
+  width:100%;
+  padding:.6rem;
+  margin-bottom:.8rem;
+  border:1px solid #ddd;
+  border-radius:4px;
+}
+.modal-content button[type="submit"]{
+  width:100%;
+  padding:.7rem;
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  border-radius:4px;
+  cursor:pointer;
+}
+.switch{
+  text-align:center;
+  margin-top:1rem;
+  cursor:pointer;
+  color:#555;
+}
+.close{
+  position:absolute;
+  top:.8rem;
+  right:1rem;
+  font-size:1.4rem;
+  cursor:pointer;
+}
+.hidden{
+  display:none;
+}
+
+footer {
+    height: 150px;
+    background-color: #ff5f5f;
+    color: #fafafa;
+    text-align: center;
+    font-size: 24px;
+}
+.social-links {
+  margin-top: 10px;
+  padding: 10px 0 0 0;
+}
+
+.social-links a {
+  color: #fcfcfc;
+  font-size: 1.5rem;
+  margin: 0 8px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  color: #ddff80; /* soft pink glow */
+  transform: scale(1.2);
+}
+.footertext {
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+/* --- Detail Page Specific Styles --- */
+
+.back {
+    /* Existing style: ensure it stays on top */
+    z-index: 10;
+    text-decoration: none;
+}
+
+.player-section {
+    padding: 20px;
+    max-width: 800px; /* Constrain width for better readability */
+    margin: 60px auto 40px; /* Center and add margin below header */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .player-section{
+    margin: 0;
+    padding: 10px;
+  }
+}
+.player-section h1 {
+    font-size: 2rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+}
+
+.player-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+#audioPlayer {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.controls button {
+    padding: 10px 15px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-weight: bold;
+}
+
+.controls button:hover {
+    background: #e04b4b; /* Slightly darker accent */
+}
+
+/* Transcript and Grammar Section (details/summary) */
+details {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0;
+    background: #f9f9f9;
+}
+
+details[open] {
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(255, 95, 95, 0.2);
+}
+
+summary {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    background: #eee;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    color: var(--text);
+}
+
+summary::marker {
+    color: var(--accent);
+}
+
+/* Preformatted Text (Transcript/Grammar content) */
+pre {
+    white-space: pre-wrap;
+    font-family: "Noto Sans KR", "Malgun Gothic", sans-serif; /* Prioritize Korean fonts */
+    font-size: 1.05rem; /* Slightly larger font for easier reading */
+    line-height: 1.8; /* Increased line spacing */
+    padding: 15px;
+    margin: 0;
+    color: #333;
+}
+
+/* --- LIVE TRANSCRIPT HIGHLIGHT (NEW) --- */
+/* The main style for the line currently being played */
+.current-line {
+    background-color: #ffe8e8; /* Light pink/red background for highlight */
+    color: var(--text);
+    padding: 2px 5px;
+    display: block; /* Important for the background color to span the line */
+    border-radius: 3px;
+    font-weight: bold;
+}

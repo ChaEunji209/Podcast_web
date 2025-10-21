@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeonsei Book Collection</title>
+    <link rel="stylesheet" href="css/book_style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/dc103e9e3b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Study with Ji</h1>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" target="_blank" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Yeonsei_Book.html" target="_blank" class="nav-link">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Course</a>
+                </li>
+                <li class="nav-item">
+                    <div class="auth-buttons">
+                        <button id="loginBtn">로그인</button>
+                        <button id="signupBtn">회원가입</button>
+                        <span id="userHello" class="hidden"></span>
+                        <button id="logoutBtn" class="hidden">로그아웃</button>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card">
+            <a href="books/Yonsei 1-1.pdf" target="_blank"><img src="img/1-1.png" alt="1-1"></a>
+            <div class="card-text">
+                <p>Level 1-1</p>
+                <a href="audio/1-1.mp3" target="_blank">audio</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 1-2.pdf" target="_blank"><img src="img/1-2.png" alt="1-2"></a>
+            <div class="card-text">
+                <p>Level 1-2</p>
+                <a href="audio/1-2.mp3" target="_blank">audio</a>
+            </div> 
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 2-1.pdf" target="_blank"><img src="img/2-1.png" alt="2-1"></a>
+            <div class="card-text">
+                <p>Level 2-1</p>
+                <a href="audio/2-1.mp3" target="_blank">audio</a>
+            </div> 
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 2-2.pdf" target="_blank"><img src="img/2-2.png" alt="2-2"></a>
+            <div class="card-text">
+                <p>Level 2-2</p>
+                <a href="audio/2-2.mp3" target="_blank">audio</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 3-1.pdf" target="_blank"><img src="img/3-1.png" alt="3-1"></a>
+            <div class="card-text">
+                <p>Level 3-1</p>
+                <a href="audio/3-1.mp3" target="_blank">audio</a>
+            </div> 
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 3-2.pdf" target="_blank"><img src="img/3-2.png" alt="3-2"></a>
+            <div class="card-text">
+                <p>Level 3-2</p>
+                <a href="audio/3-2.mp3" target="_blank">audio</a>
+            </div>  
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 4-1.pdf" target="_blank"><img src="img/4-1.png" alt="4-1"></a>
+            <div class="card-text">
+                <p>Level 4-1</p>
+                <a href="audio/4-1.mp3" target="_blank">audio</a>
+            </div>  
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 4-2.pdf" target="_blank"><img src="img/4-2.png" alt="4-2"></a>
+            <div class="card-text">
+                <p>Level 4-2</p>
+                <a href="audio/4-2.mp3" target="_blank">audio</a>
+            </div> 
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 5-1.pdf" target="_blank"><img src="img/5-1.png" alt="5-1"></a>
+            <div class="card-text">
+                <p>Level 5-1</p>
+                <a href="audio/5-1.mp3" target="_blank">audio</a>
+            </div>  
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 5-2.pdf" target="_blank"><img src="img/5-2.png" alt="5-2"></a>
+            <div class="card-text">
+                <p>Level 5-2</p>
+                <a href="audio/5-2.mp3" target="_blank">audio</a>
+            </div>  
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 6-1.pdf" target="_blank"><img src="img/6-1.png" alt="6-1"></a>
+            <div class="card-text">
+                <p>Level 6-1</p>
+                <a href="audio/6-1.mp3" target="_blank">audio</a>
+            </div>  
+        </div>
+        <div class="card">
+            <a href="books/Yonsei 6-2.pdf" target="_blank"><img src="img/6-2.png" alt="6-2"></a>
+            <div class="card-text">
+                <p>Level 6-2</p>
+                <a href="audio/6-2.mp3" target="_blank">audio</a>
+            </div>  
+        </div>
+    </div>
+
+    <div id="audio-player">
+        <span></span>
+    </div>
+
+    <div id="authModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">로그인</h2>
+      <form id="authForm">
+        <input name="email" type="email" placeholder="이메일" required />
+        <input name="password" type="password" placeholder="비밀번호" required />
+        <button type="submit">확인</button>
+      </form>
+      <p id="switchMode" class="switch">계정이 없으신가요? <b>회원가입</b></p>
+    </div>
+  </div>
+
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

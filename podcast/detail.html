@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>팟캐스트 재생</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="back" href="index.html">← 목록으로</a>
+
+  <section class="player-section">
+    <h1 id="episodeTitle"></h1>
+    <p  id="episodeDesc"></p>
+
+    <audio id="audioPlayer" controls></audio>
+
+    <div class="controls">
+      <button id="prevBtn">⏮ 이전</button>
+      <button id="nextBtn">다음 ⏭</button>
+    </div>
+
+    <details open>
+      <summary> 대본</summary>
+      <pre id="transcript"></pre>
+    </details>
+    <br>
+    <details open>
+      <summary>문법</summary>
+      <br>
+      <pre id="transcriptMy"></pre>
+    </details>
+  </section>
+
+  <script src="js/data.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+</html>
